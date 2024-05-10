@@ -185,6 +185,7 @@ return {
     })
 
     require('telescope').load_extension('projects')
+    require'telescope'.extensions.projects.projects{}
 
     -- stylua: ignore start
     vim.keymap.set("n", "<leader>X", "<cmd>XcodebuildPicker<cr>", { desc = "Show Xcodebuild Actions" })
