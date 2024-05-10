@@ -6,9 +6,7 @@ local open_plugins_lua = function()
 end
 -- Functions
 
-
-
-
+vim.api.nvim_set_keymap('n', '<leader>fp', ":Telescope projects<CR>", {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<D-f>', ':Telescope current_buffer_fuzzy_find<CR>', { noremap = true, silent = true })
 
 -- Find files like it is in Xcode
@@ -57,3 +55,8 @@ map("i", "jk", "<ESC>")
 map("n", "<leader>fed", open_plugins_lua, { desc = "Open plugins.lua" })
 
 -- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>"
+--
+
+
+vim.api.nvim_set_keymap('n', '<D-s>', ':w<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('i', '<D-s>', '<C-\\><C-n>:w<CR>', { noremap = true, silent = true })
